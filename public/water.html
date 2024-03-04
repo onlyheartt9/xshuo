@@ -1,117 +1,152 @@
-
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js页面水印</title>
+    <style>
+      /* 最简单的实现禁止复制的方法，采用css方式禁止文字选择，当然这只兼容webkit内核浏览器 */
+      * {
+        -webkit-user-select: none;
+      }
+      p {
+        font-family: "Microsoft Yahei";
+        font-size: 28px;
+      }
+      input {
+        width: 80%;
+        padding: 10px 20px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>js页面水印</title>
-  <style>
-    /* 最简单的实现禁止复制的方法，采用css方式禁止文字选择，当然这只兼容webkit内核浏览器 */
-    * { -webkit-user-select: none; }
-    p {font-family: 'Microsoft Yahei';font-size: 28px;}
-    input {width: 80%; padding: 10px 20px;}
-    * {
-      margin: 0;
-      padding: 0;
-    }
+      body {
+        overflow-x: hidden;
+      }
 
-    body {
-      overflow-x: hidden;
-    }
+      .table-sy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        pointer-events: none;
+        /*主要是这个属性*/
+        font-size: 30px;
+        color: #e9eef1;
+        z-index: 99999999999;
+      }
 
-    .table-sy {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      pointer-events: none;
-      /*主要是这个属性*/
-      font-size: 30px;
-      color: #e9eef1;
-      z-index: 99999999999;
-    }
+      .table-sy > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-40deg);
+        float: left;
+      }
 
-    .table-sy>div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transform: rotate(-40deg);
-      float: left;
-    }
+      .content {
+        width: 100%;
+        /* height: 100vh; */
+        /* height: 100vh; */
+        min-height: 100vh;
+        background: #ccc;
+      }
+    </style>
+  </head>
 
-    .content {
-      width: 100%;
-      height: 100vh;
-      background: #ccc;
+  <body>
+    <div id="sy" class="table-sy"></div>
+    <div class="content">
+      <p>
+        第三卷七子哀歌 第三百二十六章 剑神镇魔 (第1/3页)
+        李伟强化作的神龙穿梭空间，快速从前方战场撤出，光是飞行时的能量冲击，就将一系列怪物全部打飞。
+        “哇，你还会变身啊?”东方运还是第一次看到李伟强这招，不由来了新鲜感。天空中能量神龙在晃了一圈后化作原型，李伟强双手燃烧魔焰，抓住了两个灵魂体，只是用力一捏，两个强大的融合怨灵便被湮灭。"你搞这么大阵仗干嘛?”李伟强本就熟悉人皇之左瞳，现在得到麒麟刻，对空间力量更加敏感。自然知道这几个怪物是他搞过来的。东方运嘿嘿笑道:“没听过趁火打劫吗?好东西都是抢来的。”
+        李伟强无语道:“这些东西好像都是你的吧，等你将来想想办法，成为东方大帝，整个东方帝国就都是你的了。“听着不错，不过我厌烦了，找个机会归隐也不错，就像迷幻森林那样的世外桃源就好。”东方运笑道。“你还是算了吧，你要是回到迷幻森林。其他人我不知道，娜莎的父母一定会和你拼命。”
+        东方运顿时尴尬，头大脑仁疼。
+      </p>
+      <p>
+        作为脸皮薄的人，李伟强当然不会直接去偷东西，他的任务是去和东方运搞来的怪物战斗现情势混乱，李伟强他做得用留手，直接掏出曲冥创，来抵控东方运召过来的几个经物、东方运则是老着源玉之际，释放了几个迷雾技能，看似帮助李伟强，实则是在为自己偷东西做好万全的准备。
+        出了这么大的事信、东方帝国方面早就向上通知，对这件建情高度关注的东方大帝怒不可漫。直接招案而起、不但亲自前件、其至召派赵云龙到场虽然东方大帝知道的时间里、动身的时间他里，不过帝王动身毕竟讲个排场，里三层外三层的人陪同。
+        对东方商国极为忠心的赵云龙可就不同了，得到消息后，直接播下好不容易和妻子相聚时机，召唤出拉液尔，直接中向了着落落，神兽的速度非同风响，没有五分钟，他就从家赶到了碧落塔的前方、毕竟化和他的坐骑在圣城之内，无人敢拦。
+        此时，碧落塔中各国使者才刚刚离开，也有几个怪物在同一时间跑出，碧落塔前的守卫拼命抵挡，保护其他国家的使者，但奈何实力相差悬殊，无头骑土的长矛每次择动，都能带走一条生命。
+        "愿?
+        这是什么东西?"起云龙居住在圣城这么多年，还真很少进过碧落搭，更不知道里面居然真的有这么多怪物，眼见一个守卫要丧命，他身形消失，直接出现在无头骑土身前，居然徒手抓住了无头骑士的长
+        “剑......剑神大人?”几个守卫顿时狂喜。
+      </p>
+    </div>
+  </body>
+  <script>
+    loadSy(); //一进入页面就调用一下函数
+    window.onresize = function () {
+      //页面大小发生改变
+      console.log(666999);
+      loadSy();
+    };
+    /**
+     * 页面添加水印
+     */
+    function loadSy() {
+      var config = {
+        tw: 300, //内容高度
+        th: 150, // 内容宽度
+        c: 80, // 为了避免页面下方有多余的空白, 少显示一行。所以在计算每个水印高度的时候，需要加个差值，使水印分布的更均匀（一般为内容高度的一半即可）
+      };
+      var dom = document.getElementById("sy");
+      var data = {
+        name: "web张",
+        code: "0534",
+        day: "2023年5月6日",
+      };
+      var width = document.body.offsetWidth;
+      dom.style.width = width + "px";
+      var height = document.body.offsetHeight;
+      dom.style.height = height + "px";
+      var wnum = parseInt(width / config.tw) || 1;
+      var hnum = parseInt(height / config.th) || 1;
+      var wc = (width - wnum * config.tw) / wnum - 1 || 0;
+      var hc = (height - hnum * config.th + config.c) / hnum - 1 || 0;
+      var num = wnum * (hnum - 1);
+      var html = [];
+      for (var i = 0; i < num; i++) {
+        html.push(
+          '<div style="width: ' +
+            (config.tw + wc) +
+            "px;height: " +
+            (config.th + hc) +
+            'px">',
+          data.name,
+          "<br/>",
+          data.code,
+          "<br/>",
+          data.day,
+          "</div>"
+        );
+      }
+      dom.innerHTML = html.join("");
     }
-  </style>
-</head>
-
-<body>
-<div id="sy" class="table-sy"></div>
-<div class="content">
-  <p>第三卷七子哀歌 第三百二十六章 剑神镇魔 (第1/3页)
-    李伟强化作的神龙穿梭空间，快速从前方战场撤出，光是飞行时的能量冲击，就将一系列怪物全部打飞。
-    “哇，你还会变身啊?”东方运还是第一次看到李伟强这招，不由来了新鲜感。天空中能量神龙在晃了一圈后化作原型，李伟强双手燃烧魔焰，抓住了两个灵魂体，只是用力一捏，两个强大的融合怨灵便被湮灭。"你搞这么大阵仗干嘛?”李伟强本就熟悉人皇之左瞳，现在得到麒麟刻，对空间力量更加敏感。自然知道这几个怪物是他搞过来的。东方运嘿嘿笑道:“没听过趁火打劫吗?好东西都是抢来的。”
-    李伟强无语道:“这些东西好像都是你的吧，等你将来想想办法，成为东方大帝，整个东方帝国就都是你的了。“听着不错，不过我厌烦了，找个机会归隐也不错，就像迷幻森林那样的世外桃源就好。”东方运笑道。“你还是算了吧，你要是回到迷幻森林。其他人我不知道，娜莎的父母一定会和你拼命。”
-    东方运顿时尴尬，头大脑仁疼。
-    </p>
-  <p>作为脸皮薄的人，李伟强当然不会直接去偷东西，他的任务是去和东方运搞来的怪物战斗现情势混乱，李伟强他做得用留手，直接掏出曲冥创，来抵控东方运召过来的几个经物、东方运则是老着源玉之际，释放了几个迷雾技能，看似帮助李伟强，实则是在为自己偷东西做好万全的准备。
-    出了这么大的事信、东方帝国方面早就向上通知，对这件建情高度关注的东方大帝怒不可漫。直接招案而起、不但亲自前件、其至召派赵云龙到场虽然东方大帝知道的时间里、动身的时间他里，不过帝王动身毕竟讲个排场，里三层外三层的人陪同。
-    对东方商国极为忠心的赵云龙可就不同了，得到消息后，直接播下好不容易和妻子相聚时机，召唤出拉液尔，直接中向了着落落，神兽的速度非同风响，没有五分钟，他就从家赶到了碧落塔的前方、毕竟化和他的坐骑在圣城之内，无人敢拦。
-    此时，碧落塔中各国使者才刚刚离开，也有几个怪物在同一时间跑出，碧落塔前的守卫拼命抵挡，保护其他国家的使者，但奈何实力相差悬殊，无头骑土的长矛每次择动，都能带走一条生命。
-    "愿? 这是什么东西?"起云龙居住在圣城这么多年，还真很少进过碧落搭，更不知道里面居然真的有这么多怪物，眼见一个守卫要丧命，他身形消失，直接出现在无头骑土身前，居然徒手抓住了无头骑士的长
-    “剑......剑神大人?”几个守卫顿时狂喜。</p>
-</div>
-</body>
-<script>
-  loadSy();   //一进入页面就调用一下函数
-  window.onresize = function () {    //页面大小发生改变
-    loadSy();
-  }
-  /**
-   * 页面添加水印
-   */
-  function loadSy() {
-    var config = {
-      tw: 300, //内容高度
-      th: 150,  // 内容宽度
-      c: 80 // 为了避免页面下方有多余的空白, 少显示一行。所以在计算每个水印高度的时候，需要加个差值，使水印分布的更均匀（一般为内容高度的一半即可）
-    }
-    var dom = document.getElementById("sy");
-    var data = {
-      name: "web张",
-      code: "0534",
-      day: "2023年5月6日"
-    }
-    var width = document.body.offsetWidth;
-    dom.style.width = width + "px";
-    var height = document.body.offsetHeight;
-    dom.style.height = height + "px";
-    var wnum = parseInt(width / config.tw) || 1;
-    var hnum = parseInt(height / config.th) || 1;
-    var wc = (width - wnum * config.tw) / wnum - 1 || 0;
-    var hc = (height - hnum * config.th + config.c) / hnum - 1 || 0;
-    var num = wnum * (hnum - 1);
-    var html = [];
-    for (var i = 0; i < num; i++) {
-      html.push('<div style="width: ' + (config.tw + wc) + 'px;height: ' + (config.th + hc) + 'px">', data.name, '<br/>', data.code, '<br/>', data.day, '</div>');
-    }
-    dom.innerHTML = html.join("");
-  }
-</script>
-<script type="text/javascript">
-  // 禁止右键菜单
-  document.oncontextmenu = function(){ return false; };
-  // 禁止文字选择
-  document.onselectstart = function(){ return false; };
-  // 禁止复制
-  document.oncopy = function(){ return false; };
-  // 禁止剪切
-  document.oncut = function(){ return false; };
-  // 禁止粘贴
-  document.onpaste = function(){ return false; };
-</script>
+  </script>
+  <script type="text/javascript">
+    // 禁止右键菜单
+    document.oncontextmenu = function () {
+      return false;
+    };
+    // 禁止文字选择
+    document.onselectstart = function () {
+      return false;
+    };
+    // 禁止复制
+    document.oncopy = function () {
+      return false;
+    };
+    // 禁止剪切
+    document.oncut = function () {
+      return false;
+    };
+    // 禁止粘贴
+    document.onpaste = function () {
+      return false;
+    };
+  </script>
 </html>
- 
